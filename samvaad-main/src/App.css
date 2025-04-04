@@ -1,0 +1,205 @@
+/* App.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+}
+
+/* Layout */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 240px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 30px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+  padding: 30px 10px;
+}
+
+.sidebar .toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: -15px;
+  background: #1abc9c;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed .toggle-btn {
+  right: -15px;
+}
+
+.sidebar h2.title {
+  font-size: 22px;
+  margin: 50px 0 30px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .title {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  margin: 20px 0;
+}
+
+.sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #1abc9c;
+  transform: translateX(5px);
+}
+
+.sidebar.collapsed a {
+  justify-content: center;
+}
+
+.sidebar.collapsed a span {
+  display: none;
+}
+
+/* Main content area */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f9fafb;
+  transition: margin-left 0.3s ease;
+}
+
+/* Dashboard section */
+.dashboard {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.dashboard h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.dashboard nav a {
+  display: inline-block;
+  margin: 10px 12px;
+  padding: 12px 20px;
+  background-color: #ecf0f1;
+  color: #34495e;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dashboard nav a:hover {
+  background-color: #d0e9e2;
+  color: #1abc9c;
+}
+
+/* Section titles */
+.data-section {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.data-section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  border-left: 5px solid #1abc9c;
+  padding-left: 15px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+thead {
+  background-color: #2c3e50;
+  color: white;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f4f8;
+}
+
+tbody tr:hover {
+  background-color: #dfeff0;
+  transition: background 0.2s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar.collapsed {
+    width: 100%;
+  }
+
+  .dashboard nav a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
