@@ -203,3 +203,18 @@ tbody tr:hover {
     padding: 20px;
   }
 }
+
+.view-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-btn:hover {
+  background-color: #388e3c;
+}

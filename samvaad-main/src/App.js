@@ -35,6 +35,7 @@ const Volunteers = () => (
           <th>Therapy Type</th>
           <th>Sessions Held</th>
           <th>Experience (Years)</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -44,6 +45,14 @@ const Volunteers = () => (
           <td>Cognitive Behavioral Therapy</td>
           <td>12</td>
           <td>2</td>
+          <td>
+            <button
+              onClick={() => alert("Viewing details for Aditi Sharma")}
+              className="view-btn"
+            >
+              View Details
+            </button>
+          </td>
         </tr>
         <tr>
           <td>2</td>
@@ -51,6 +60,14 @@ const Volunteers = () => (
           <td>Mindfulness Therapy</td>
           <td>8</td>
           <td>1</td>
+          <td>
+            <button
+              onClick={() => alert("Viewing details for Rohan Gupta")}
+              className="view-btn"
+            >
+              View Details
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
