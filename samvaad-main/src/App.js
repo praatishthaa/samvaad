@@ -7,6 +7,8 @@ import {
   FaBars,
   FaChevronLeft,
 } from "react-icons/fa";
+import VerifyConsultant from "./VerifyConsultant";
+import VerifyVolunteer from "./VerifyVolunteer";
 import "./App.css";
 
 const Dashboard = () => (
@@ -179,6 +181,8 @@ const App = () => {
             <Route path="/volunteers" element={<Volunteers />} />
             <Route path="/consultants" element={<Consultants />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/verify-consultant" element={<VerifyConsultant />} />
+           <Route path="/verify-volunteer" element={<VerifyVolunteer />} />
           </Routes>
         </main>
       </div>
